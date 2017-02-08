@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='myFirstApp'>
   <head>
     <meta charset="utf-8">
+    <script src='angular.min.js'></script>
+    <script src='app.js'></script>
     <title>PS I love you</title>
   </head>
   <body>
-    <h1>Voce eh a menina mais linda do mundo!</h1>
-    <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/12742455_1023921701009557_530591007471567822_n.jpg?oh=07986e4c1bdbe817198a2c053efec43c&oe=593B080D">
+    <div ng-controller = 'myFirstController'>
+      Digite seu nome: <input type="text" ng-model='name'>
+      <div ng-show="name == 'Leilah' || name == 'leilah'">
+        <h1>Voce eh a menina mais linda do mundo!</h1>
+        <img ng-src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/12742455_1023921701009557_530591007471567822_n.jpg?oh=07986e4c1bdbe817198a2c053efec43c&oe=593B080D" >
+      </div>
+    </div>
   </body>
 </html>
